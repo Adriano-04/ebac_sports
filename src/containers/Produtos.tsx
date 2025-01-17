@@ -8,7 +8,6 @@ import { useGetProdutoQuery } from '../services/api'
 
 const ProdutosComponent = () => {
   const { data: lista } = useGetProdutoQuery()
-  const produtos = useSelector((state: RootReducer) => state.carrinho.item)
   const favoritos = useSelector((state: RootReducer) => state.favoritos.item)
 
   const produtoEstaNosFavoritos = (produto: ProdutoType) => {
